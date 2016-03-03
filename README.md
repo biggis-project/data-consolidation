@@ -31,5 +31,5 @@ Feuchte [%], DP= Taupunkt)
 - Im JASONP Format oder GME
 
 Dokumentation see the following examples:
-- [Example #1 query with JSON output](https://1-dot-lupo-messwerte.appspot.com/lupo_luft_query?land=bw&limit=999&format=gme&callback=abc)
+- [Example #1 query with GME output](https://1-dot-lupo-messwerte.appspot.com/lupo_luft_query?land=bw&limit=999&format=gme&callback=abc)
 - [Example #2 query with JSON output](https://1-dot-lupo-messwerte.appspot.com/lupo_luft_query?land=bw&limit=999&format=jasonp)
