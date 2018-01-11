@@ -1,0 +1,44 @@
+# baseURI: http://biggis/example/schema
+# imports: http://datashapes.org/dash
+
+@prefix : <http://biggis/example/schema#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://biggis/example/schema>
+  rdf:type owl:Ontology ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+
+:Message
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  dash:abstract "true"^^xsd:boolean ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+
+:LUBWMessage
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:subClassOf :Message ;
+  sh:property [
+      sh:path :temparature ;
+      sh:datatype xsd:integer ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "temparature" ;
+    ] ;
+  sh:property [
+      sh:path :timestamp ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "timestamp" ;
+    ] ;
+.

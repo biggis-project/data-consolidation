@@ -1,0 +1,34 @@
+# baseURI: http://biggis/example/data
+# imports: http://biggis/example/schema
+
+@prefix schema: <http://biggis/example/schema#> .
+@prefix : <http://biggis/example/data#> .
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://biggis/example/data>
+  rdf:type owl:Ontology ;
+  owl:imports <http://biggis/example/schema> ;
+.
+[
+  rdf:type schema:LUBWMessage ;
+  schema:temparature 12 ;
+  schema:timestamp "2001-10-26T21:32:52"^^xsd:dateTime ;
+].
+[
+  rdf:type schema:LUBWMessage ;
+  schema:temparature 13 ;
+  schema:timestamp "2001-10-26T21:32:52"^^xsd:dateTime ;
+].
+[
+  rdf:type schema:LUBWMessage ;
+  schema:temparature 14 ;
+  schema:timestamp "2001-10-26T21:32:52"^^xsd:dateTime ;
+].
+[
+  rdf:type schema:LUBWMessage ;
+  schema:temparature 15 ;
+  schema:timestamp "2001-10-26T21:32:52"^^xsd:dateTime ;
+].
